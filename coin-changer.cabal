@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0c736868d1ce5d8e981477bac01059b25f40fa196a08d93a3ef7510de65de4e8
+-- hash: 7d1857c60d4f1468707f73a2e117027a9e128c1ce2f9426c281db8acd02e5e3c
 
 name:           coin-changer
 version:        0.1.0.0
@@ -29,7 +29,8 @@ library
       Paths_coin_changer
   hs-source-dirs:
       src
-  default-extensions: ScopedTypeVariables
+  default-extensions:
+      ScopedTypeVariables
   build-depends:
       base >=4.7 && <5
   default-language: Haskell2010
@@ -40,7 +41,8 @@ executable coin-changer-exe
       Paths_coin_changer
   hs-source-dirs:
       app
-  default-extensions: ScopedTypeVariables
+  default-extensions:
+      ScopedTypeVariables
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
@@ -54,7 +56,8 @@ test-suite coin-changer-test
       Paths_coin_changer
   hs-source-dirs:
       test
-  default-extensions: ScopedTypeVariables
+  default-extensions:
+      ScopedTypeVariables
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       QuickCheck
