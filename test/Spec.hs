@@ -11,7 +11,11 @@ main = hspec $ do
       -- https://hspec.github.io/quickcheck.html
       property $ \(x :: String) -> reverse (reverse x) == x
 
-  describe "coin changer" $ do
+  describe "coin changer example based tests" $ do
+    it "returns a the solution with the least required amount of coins" $ do
+      change 19 [1, 1, 1, 1, 5, 14, 15] `shouldBe` ([14, 5], 0)
+
+  describe "coin changer property based tests" $ do
     it "returns the amount when there are no coins available" $ do
       property $ \(Positive amount) -> change amount [] `shouldBe` ([], amount)
 
